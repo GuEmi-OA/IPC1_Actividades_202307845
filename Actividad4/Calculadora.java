@@ -1,6 +1,15 @@
 package calculadora;
 
-import java.util.Scanner;
+/*
+Actividad #4 - Calculadora básica en consola con números escritos
+Nombre: Guillermo Emilio Ordoñez Alvarez
+Carné: 202307845
+Semetre : 2 
+Curso: Laboratorio de Introducción a la programación y computación
+Sección: "A"
+*/
+
+import java.util.Scanner; 
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,7 +20,7 @@ public class Calculadora {
      while (true){  
         Scanner leer_texto = new Scanner(System.in);
         
-        Map<String, Integer> mapa = new HashMap<>();
+        Map<String, Integer> mapa = new HashMap<>(); // mapeo de numeros escritos a numeros int
             mapa.put("uno", 1);
             mapa.put("dos", 2);
             mapa.put("tres", 3);
@@ -27,12 +36,12 @@ public class Calculadora {
         
         System.out.println("Calculadora");
         System.out.println("Escribe un número A");
-        String numero_A = leer_texto.nextLine().toLowerCase();
-        int eleccion_A = mapa.get(numero_A);
+        String numero_A = leer_texto.nextLine().toLowerCase(); 
+        int eleccion_A = mapa.get(numero_A);//Leer el primer número
         
         System.out.println("Escribe un número B");
         String numero_B = leer_texto.nextLine().toLowerCase();
-        int eleccion_B = mapa.get(numero_B);
+        int eleccion_B = mapa.get(numero_B);//Leer el segundo número
         
         
        
@@ -47,51 +56,51 @@ public class Calculadora {
         System.out.println("6. Raíz");
         System.out.println("7. Salir");
         
-        int opcion = leer_texto.nextInt();
+        int opcion = leer_texto.nextInt();//Leer opcion elegida
         
         if (opcion == 1) {
-            double Mostrar_resultado = eleccion_A + eleccion_B;
+            double Mostrar_resultado = eleccion_A + eleccion_B;   //Opción de sumar
             System.out.println("--------------------------------");
             System.out.println("El resultado es:" + Mostrar_resultado);
             System.out.println("--------------------------------");
             continue;
         } 
         else if (opcion == 2){
-            double Mostrar_resultado = eleccion_A - eleccion_B;
+            double Mostrar_resultado = eleccion_A - eleccion_B; //Opción de restar
             System.out.println("--------------------------------");
             System.out.println("El resultado es:" + Mostrar_resultado);
             System.out.println("--------------------------------");
             continue;
         }
         else if (opcion == 3){
-            double Mostrar_resultado = eleccion_A * eleccion_B;
+            double Mostrar_resultado = eleccion_A * eleccion_B; //Opción de multiplicar
             System.out.println("--------------------------------");
             System.out.println("El resultado es:" + Mostrar_resultado);
             System.out.println("--------------------------------");
             continue;
         }
         else if (opcion == 4){
-            double Mostrar_resultado = eleccion_A / eleccion_B;
+            double Mostrar_resultado = eleccion_A / eleccion_B; //Opción de dividir
             System.out.println("--------------------------------");
             System.out.println("El resultado es:" + Mostrar_resultado);
             System.out.println("--------------------------------");
             continue;
         }
         else if (opcion == 5){
-            double Mostrar_resultado = Math.pow(eleccion_A,  eleccion_B);
+            double Mostrar_resultado = Math.pow(eleccion_A,  eleccion_B); //Opción de potencia
             System.out.println("--------------------------------");
             System.out.println("El resultado es:" + Mostrar_resultado);
             System.out.println("--------------------------------");
             continue;
         }
         else if (opcion == 6){
-            double Mostrar_resultado = Math.pow(eleccion_A, 1.0 / eleccion_B);
+            double Mostrar_resultado = Math.pow(eleccion_A, 1.0 / eleccion_B);  //Opción de raíz
             System.out.println("--------------------------------");
             System.out.println("El resultado es:" + Mostrar_resultado);
             System.out.println("--------------------------------");
             continue;
         }
-        else if (opcion == 7){
+        else if (opcion == 7){                                                  //Opción de Salir
            
             
             while (true){
@@ -102,10 +111,10 @@ public class Calculadora {
                 
                 int opcion_saldia = leer_texto.nextInt();
                 
-                if(opcion_saldia == 1){
+                if(opcion_saldia == 1){                                             //Opción de salir pero repetir escribir número
                     break;
                 }
-                else if (opcion_saldia == 2){
+                else if (opcion_saldia == 2){                                       //Opción de salir del programa
                 System.out.println("Cerrando programa...");
                 System.exit(0);
                 }
